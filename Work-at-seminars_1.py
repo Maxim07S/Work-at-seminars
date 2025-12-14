@@ -121,11 +121,17 @@ if __name__ == "__main__":
     print(v1)
     print("|v1| =", v1.magnitude())
     print("v1 + v2 =", v1.add(v2))
+    print("v1 - v2 =", v1.subtract(v2))
     print("v1 · v2 =", v1.dot(v2))
-    print("Коллинеарны?", v1.is_collinear(v2))
+    print("v1 || v2?", v1.is_collinear(v2))
+    print("v1 перпендикулярен v2?", v1.is_perpendicular(v2))
+
 
     ball = Ball(p1, 2.5)
+
     print(ball)
     print("Точка внутри шара?", ball.contains_point(p2))
+    print("Точка на шаре:", ball.is_on_surface(p2))
+
     print("Площадь поверхности:", ball.surface_area())
     print("Объём:", ball.volume())
